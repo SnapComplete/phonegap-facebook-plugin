@@ -106,6 +106,8 @@ public class ConnectPlugin extends CordovaPlugin {
             // Call this method to initialize the session state info
             onSessionStateChange(session.getState(), null);
         }
+        
+        AppEventsLogger.activateApp(cordova.getActivity());
         super.initialize(cordova, webView);
     }
 
